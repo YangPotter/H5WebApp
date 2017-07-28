@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!--确保适当的绘制和触屏缩放-->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--标题-->
+
+    <title>学生端页面</title>
+
+    <!--引入的Bootstrap css、js文件-->
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/StuIndex.css">
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="navbar navbar-default navbar-fixed-top" id="topBar">
+
+    <div class="container">
+        <!--logo-->
+
+        <div class="navbar-header">
+            <a href="#" class="navbar-brand hidden-xs hidden-sm">
+                <img src="img/Logo.png">
+            </a>
+            <a href="#" class="navbar-brand-mobile visible-sm visible-xs">
+                <b><span class="glyphicon glyphicon-arrow-left"></span></b>
+            </a>
+        </div>
+
+        <label id="menuLabel" for="menuCheckBox" class="glyphicon glyphicon glyphicon-menu-hamburger topbar-more topbar-more-right visible-xs-inline-block"></label>
+        <input id="menuCheckBox" type="checkbox" class="hidden">
+
+        <div class="hidden-xs">
+            <!--链接-->
+
+            <ul class="nav navbar-nav topBar-ul">
+                <li><a href="#"><b>首页</b></a></li>
+                <li><a href="#">加入班级</a></li>
+                <li><a href="#">创建班级</a></li>
+            </ul>
+
+            <!--右侧链接-->
+
+            <ul class="nav navbar-nav navbar-right topBar-ul">
+                <li><a href="#">登陆</a></li>
+                <li><a href="#">注册</a></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+<div class="container" id="mainContent">
+
+    <div class="row">
+        <!--左侧导航栏-->
+        <div class="col-md-2 hidden-xs hidden-sm">
+            <div class="list-group side-bar">
+                <a href="#" class="list-group-item">创建班级</a>
+                <a href="#" class="list-group-item">加入班级</a>
+                <a href="#" class="list-group-item">课堂</a>
+                <a href="#" class="list-group-item">我的信息</a>
+            </div>
+        </div>
+
+        <!--内容卡片-->
+        <div class="col-md-7">
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <div class="panel-title">
+                        <h4>课堂</h4>
+                        <a href="#" class="hidden-md"><h4>加入班级</h4></a>
+                    </div>
+                </div>
+                <div class="panel-body outbox">
+                    <div class="class-list">
+                        <a href="http://www.baidu.com" class="col-xs-12 class-list-item panel panel-danger">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">
+                                    <span class="titleSpan">15计测试-DS-54</span>
+                                    &nbsp;&nbsp;&nbsp;
+                                    <label for="checkMore" class="glyphicon glyphicon-option-vertical more"></label>
+                                    <input id="checkMore" type="checkbox" class="hidden" data-toggle="modal" data-target="#myModal">
+                                </h3>
+                            </div>
+                            <div class="panel-body">
+                                <h4>班级成员：24人</h4>
+                            </div>
+                            <div class="panel-footer">角色：学生  教师：zhu</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--模态框-->
+            <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title">管理班级</h4>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                            <button type="button" class="btn btn-primary">归档班级</button>
+                            <button type="button" class="btn btn-primary">退出班级</button>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>
+
+<!--移动端底部导航栏-->
+<div class="navbar navbar-default navbar-fixed-bottom hidden-md hidden-lg">
+
+    <div class="container">
+        <div class="btn-group-lg row">
+            <button type="button" class="btn btn-default col-xs-6 bottombtn">课堂</button>
+            <button type="button" class="btn btn-default col-xs-6 bottombtn">我</button>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
